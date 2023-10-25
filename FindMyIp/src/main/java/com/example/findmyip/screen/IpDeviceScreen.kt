@@ -11,6 +11,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import com.example.findmyip.model.IpResponse
 import com.example.findmyip.model.IpState
 import com.example.findmyip.viewmodel.IpViewModel
@@ -37,14 +38,14 @@ fun DisplayIp(viewModel: IpViewModel) {
 
 @Composable
 fun DisplayError(errorMessage: String) {
-    Text(text = errorMessage, color = Color.Red)
+    Text(text = errorMessage, color = Color.Red, textAlign = TextAlign.Center)
 }
 
 @Composable
 fun DisplaySuccess(ipResponse: IpResponse) {
     Column {
-        Text(text = "Your City: ${ipResponse.city}")
-        Text(text = "Your Country: ${ipResponse.country_name}")
-        Text(text = "Your Region: ${ipResponse.region}")
+        Text(text = "Your City: ${ipResponse.city}", textAlign = TextAlign.Center)
+        Text(text = "Your Country: ${ipResponse.country_name}", textAlign = TextAlign.Center)
+        Text(text = "Your Region: ${ipResponse.region}", textAlign = TextAlign.Center)
     }
 }

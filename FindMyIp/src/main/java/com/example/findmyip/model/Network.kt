@@ -29,7 +29,7 @@ object Network {
             chain.proceed(newRequest)
         }
         return OkHttpClient.Builder()
-            .addInterceptor(interceptor)
+            //.addInterceptor(interceptor)
             .addInterceptor(HttpLoggingInterceptor().apply {
                 level = HttpLoggingInterceptor.Level.HEADERS
             })

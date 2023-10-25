@@ -21,6 +21,10 @@ class IpRepository {
                     emit(IpState.Error(response.message()))
                 }
             }
+            else {
+                emit(IpState.Loading(false))
+                emit(IpState.Error(response.raw().toString()))
+            }
         }
     }
 }

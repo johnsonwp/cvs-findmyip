@@ -70,4 +70,6 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    testImplementation("org.mockito:mockito-core:3.11.2")
+    testImplementation("com.squareup.retrofit2:retrofit-mock:2.9.0")
 }
